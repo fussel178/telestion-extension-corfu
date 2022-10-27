@@ -1,6 +1,5 @@
 package org.github.fussel178.telestion.extension.corfu.corfu.mapper.jackson;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -21,7 +20,7 @@ public class BitSetDeserializer extends StdDeserializer<BitSet> {
 	}
 
 	@Override
-	public BitSet deserialize(JsonParser parser, DeserializationContext context) throws IOException, JacksonException {
+	public BitSet deserialize(JsonParser parser, DeserializationContext context) throws IOException {
 		// structure check
 		if (parser.getCurrentToken() != JsonToken.START_ARRAY) return null;
 
