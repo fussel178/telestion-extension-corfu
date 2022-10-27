@@ -1,3 +1,7 @@
+plugins {
+    id 'java-library'
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
@@ -14,7 +18,25 @@ ext {
 description = 'Telestion Verticles that map Corfu telemetry and telecommand messages'
 
 dependencies {
+    // Vert.x dependencies
+    api group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.14.0-rc1'
+    api group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.0-rc1'
+    api group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0-rc1'
+    api group: 'io.vertx', name: 'vertx-core', version: '4.3.4'
 
+    // Telestion dependencies
+    api group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    api group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.11'
+    api group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '7.1.1'
+    api group: 'de.wuespace.telestion', name: 'telestion-api', version: '0.9.0'
+    api group: 'de.wuespace.telestion', name: 'telestion-services', version: '0.9.0'
+
+    // module dependencies
+    api project(':modules:corfu-message-mapper')
+    api project(':modules:rodos-message-verticles')
+
+    // internal module dependencies
+    implementation project(':modules:corfu-extension-utils')
 }
 
 test {
