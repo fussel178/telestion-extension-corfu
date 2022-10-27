@@ -1,0 +1,22 @@
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Rodos Message Mapper'
+}
+
+description = 'Library that maps Rodos network messages from their binary format into Telestion JSON messages'
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}

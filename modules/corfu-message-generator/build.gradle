@@ -1,0 +1,22 @@
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Corfu Message Generator'
+}
+
+description = 'Library that reads Corfu configurations and generates Corfu messages for the Corfu message mapper'
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}

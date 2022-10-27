@@ -1,0 +1,22 @@
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Corfu Message Verticles'
+}
+
+description = 'Telestion Verticles that map Corfu telemetry and telecommand messages'
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}

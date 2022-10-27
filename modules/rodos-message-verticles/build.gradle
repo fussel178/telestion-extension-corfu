@@ -1,0 +1,22 @@
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Rodos Message Verticles'
+}
+
+description = 'Telestion Verticles that map Rodos network messages'
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}

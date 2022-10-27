@@ -1,0 +1,17 @@
+rootProject.name = 'telestion-extension-corfu'
+
+gradle.ext.sourceCompatibility = '16'
+gradle.ext.targetCompatibility = '16'
+// force signing of artifacts regardless of publish steps
+gradle.ext.forceSign = false
+
+// extract version information from version.txt
+gradle.ext.version = file('version.txt').text.trim()
+
+// include your modules here
+include ':modules:corfu-extension-utils'
+include ':modules:corfu-message-generator'
+include ':modules:corfu-message-mapper'
+include ':modules:corfu-message-verticles'
+include ':modules:rodos-message-mapper'
+include ':modules:rodos-message-verticles'

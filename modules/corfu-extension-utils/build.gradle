@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Corfu Extension Utils'
+}
+
+description = 'Utilities that are used by other modules in the extension'
+
+dependencies {
+    // add your dependencies here
+}
+
+test {
+    useJUnitPlatform()
+}

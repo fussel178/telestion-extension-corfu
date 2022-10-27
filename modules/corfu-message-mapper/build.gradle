@@ -1,0 +1,22 @@
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+ext {
+    prettyName = 'Corfu Message Mapper'
+}
+
+description = 'Library that maps Corfu telemetry and telecommand messages from their binary format into Telestion JSON messages'
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}
