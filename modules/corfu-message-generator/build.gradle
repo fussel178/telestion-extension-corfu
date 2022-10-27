@@ -1,3 +1,7 @@
+plugins {
+    id 'java-library'
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
@@ -14,7 +18,20 @@ ext {
 description = 'Library that reads Corfu configurations and generates Corfu messages for the Corfu message mapper'
 
 dependencies {
+    // module dependencies
+    api project(':modules:corfu-message-mapper')
 
+    // internal Jackson dependencies
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.14.0-rc1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.0-rc1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0-rc1'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.4'
+
+    // internal utility dependencies
+    implementation group: 'com.hubspot.jinjava', name: 'jinjava', version: '2.6.0'
+
+    // internal module dependencies
+    implementation project(':modules:corfu-extension-utils')
 }
 
 test {
