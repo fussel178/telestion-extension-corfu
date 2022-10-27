@@ -22,15 +22,13 @@ dependencies {
     // Telestion dependencies
     api group: 'de.wuespace.telestion', name: 'telestion-api', version: '0.9.0'
 
-    // module dependencies
-    api project(':modules:corfu-extension-utils')
-
     // internal Vert.x dependencies
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.0-rc1'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0-rc1'
 
     // internal module dependencies
     implementation project(':modules:rodos-message-mapper')
+    implementation project(':modules:corfu-extension-utils')
 }
 
 test {

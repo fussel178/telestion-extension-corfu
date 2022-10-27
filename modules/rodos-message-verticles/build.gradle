@@ -24,7 +24,10 @@ dependencies {
     api group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0-rc1'
     api group: 'io.vertx', name: 'vertx-core', version: '4.3.4'
 
-    // telestion dependencies
+    // Telestion dependencies
+    api group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    api group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.11'
+    api group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '7.1.1'
     api group: 'de.wuespace.telestion', name: 'telestion-api', version: '0.9.0'
     api group: 'de.wuespace.telestion', name: 'telestion-services', version: '0.9.0'
 
