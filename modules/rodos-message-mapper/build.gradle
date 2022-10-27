@@ -1,3 +1,7 @@
+plugins {
+    id 'java-library'
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
@@ -14,7 +18,11 @@ ext {
 description = 'Library that maps Rodos network messages from their binary format into Telestion JSON messages'
 
 dependencies {
+    // add your dependencies here
+    api project(':modules:corfu-extension-utils')
+    api group: 'de.wuespace.telestion', name: 'telestion-api', version: '0.9.0'
 
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.0-rc1'
 }
 
 test {
