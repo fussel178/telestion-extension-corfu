@@ -1,0 +1,22 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+ext {
+    prettyName = 'Corfu Gradle Plugin'
+}
+
+description = 'Gradle Plugin that provides a task to generate Corfu messages before build'
+
+gradlePlugin {
+    plugins {
+        corfuMessageGenerator {
+            id = 'org.github.fussel178.telestion.extension.corfu.plugin'
+            implementationClass = 'org.github.fussel178.telestion.extension.corfu.plugin.CorfuGeneratorPlugin'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':modules:corfu-message-generator')
+}

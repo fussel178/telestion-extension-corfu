@@ -10,6 +10,7 @@ gradle.ext.version = file('version.txt').text.trim()
 
 // include your modules here
 include ':modules:corfu-extension-utils'
+include ':modules:corfu-gradle-plugin'
 include ':modules:corfu-message-generator'
 include ':modules:corfu-message-mapper'
 include ':modules:corfu-message-verticles'
