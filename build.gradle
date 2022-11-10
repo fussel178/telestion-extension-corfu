@@ -117,22 +117,17 @@ subprojects {
         }
 
         repositories {
-            // TODO: Add publishing repositories
-        }
-
-        signing {
-            afterEvaluate {
-                required { gradle.forceSign || gradle.taskGraph.hasTask('publish') }
-                // get key + key-id + password
-                def signingKeyId = findProperty('signingKeyId') as String
-                def signingKey = findProperty('signingKey') as String
-                def signingPassword = findProperty('signingPassword') as String
-                // decrypt key
-                useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
-                // sign
-                sign publishing.publications.maven
+            maven {
+                name = "GitHubPackages"
+                url = "https://maven.pkg.github.com/fussel178/telestion-extension-corfu"
+                credentials {
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
+                }
             }
         }
+
+        // TODO: Add signing (example in telestion-core)
     }
 }
 
