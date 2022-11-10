@@ -106,10 +106,9 @@ subprojects {
                         }
 
                         scm {
-                            // TODO: Add source control information
-                            //connection = 'scm:git:git://github.com/wuespace/telestion-core.git'
-                            //developerConnection = 'scm:git:ssh://git@github.com:wuespace/telestion-core.git'
-                            //url = 'https://github.com/wuespace/telestion-core/tree/main'
+                            connection = 'scm:git:git://github.com/fussel178/telestion-extension-corfu.git'
+                            developerConnection = 'scm:git:ssh://git@github.com:fussel178/telestion-extension-corfu.git'
+                            url = 'https://github.com/fussel178/telestion-extension-corfu/tree/main'
                         }
                     }
                 }
