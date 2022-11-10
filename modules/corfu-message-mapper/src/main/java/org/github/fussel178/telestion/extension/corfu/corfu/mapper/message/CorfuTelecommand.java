@@ -8,8 +8,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @param commandIndex    the index of the command message
  * @param sequenceCounter the sequential number of the telecommand message
  * @param timeToExecute   the time on which the telecommand should be executed
- *                        (<code><0</code> defines a relative time,
- *                        <code>>0</code> defines an absolute time,
+ *                        (<code>&lt;0</code> defines a relative time,
+ *                        <code>&gt;0</code> defines an absolute time,
  *                        <code>0</code> means immediate execution)
  * @param node            the node that should receive this telecommand message
  * @param app             the app on the node that should receive this telecommand message

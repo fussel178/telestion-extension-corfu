@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class RodosCheckSum {
 	/**
-	 * <h2>Description</h2>
+	 * <h4>Description</h4>
 	 * Rotates the bit-representation of the input data one count to the right
 	 * and move the fallen out bit (the right-most bit) back to the beginning (the left-most bit).
 	 *
-	 * <h2>Example</h2>
+	 * <h4>Example</h4>
 	 * <pre>
 	 *     Input: 0111 1101 1111 0001
 	 *

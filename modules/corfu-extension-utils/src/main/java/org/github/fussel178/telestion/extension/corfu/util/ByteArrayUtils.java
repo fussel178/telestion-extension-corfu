@@ -5,13 +5,13 @@ import java.util.Objects;
 public class ByteArrayUtils {
 
 	/**
-	 * <h2>Description</h2>
+	 * <h4>Description</h4>
 	 * Calculates the amount of bytes that are needed to represent the number of bits in a "bit-by-bit" format.
 	 *
-	 * <h2>Example</h2>
+	 * <h4>Example</h4>
 	 *
 	 * <pre>
-	 *                              <--- 1 byte ---> <--- 1 byte --->
+	 *                              &lt;--- 1 byte ---&gt; &lt;--- 1 byte ---&gt;
 	 *     Needed by application:   1 1 1 0 0 1 0 1 : 1 1              (10 bits)
 	 *     Storage representation:  1 1 1 0 0 1 0 1 : 1 1 0 0 0 0 0 0  (16 bits or 2 bytes)
 	 * </pre>
@@ -24,10 +24,10 @@ public class ByteArrayUtils {
 	}
 
 	/**
-	 * <h2>Description</h2>
+	 * <h4>Description</h4>
 	 * Stringifies the given binary array in a colon of words in hexadecimal representation.
 	 *
-	 * <h2>Example</h2>
+	 * <h4>Example</h4>
 	 *
 	 * <pre>[0E 13 29 A4 BC BF FF 07 35 69] (size: 9 bytes)</pre>
 	 *
